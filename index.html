@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudioMelBH - Especialista em Tranças em Belo Horizonte | Tranças Nagô, Box Braids e Fulani</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <meta name="description" content="StudioMelBH: Especialista em tranças em Belo Horizonte. Tranças Nagô, Box Braids, Fulani Braids e mais. Agende seu horário! Profissional qualificada com anos de experiência.">
     <meta name="keywords" content="tranças BH, tranças Belo Horizonte, tranças nagô, box braids, fulani braids, tranças afro, tranças protetoras, studio de tranças, melissa tranças">
     <meta name="author" content="StudioMelBH">
     <link rel="canonical" href="https://studiomelbh.com" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://studiomelbh.com/">
     <meta property="og:title" content="StudioMelBH - Especialista em Tranças em Belo Horizonte">
     <meta property="og:description" content="Especialista em tranças em BH: Tranças Nagô, Box Braids, Fulani Braids e mais. Profissional qualificada com anos de experiência.">
-    <meta property="og:image" content="https://studiomelbh.com/portfolio-background.webp">
+    <meta property="og:image" content="https://studiomelbh.com/portfolio-background.jpg">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -135,7 +137,7 @@
         }
 
         .btn-whatsapp:hover {
-            background-color: var(--whatsapp); /* Mantém a mesma cor no hover */
+            background-color: var(--whatsapp);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
         }
@@ -240,7 +242,7 @@
             }
         }
 
-        /* WhatsApp Flutuante - Apenas Pulsante */
+        /* WhatsApp Flutuante */
         .whatsapp-float {
             position: fixed;
             bottom: 25px;
@@ -256,12 +258,12 @@
             font-size: 2rem;
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
             z-index: 1000;
-            animation: pulse 2s infinite; /* Removida a animação de flutuação */
+            animation: pulse 2s infinite;
             transition: var(--transition);
         }
 
         .whatsapp-float:hover {
-            animation: pulse 2s infinite; /* Continua pulsando no hover */
+            animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
@@ -358,15 +360,14 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: 
-                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
-                url('portfolio-background.webp') no-repeat center center/cover;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             display: flex;
             align-items: center;
             text-align: center;
-            color: #fff;
+            color: var(--dark);
             margin-top: 70px;
             position: relative;
+            overflow: hidden;
         }
 
         .hero::before {
@@ -376,8 +377,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('portfolio-background.jpg');
-            opacity: 0.1;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><path d="M50,15 C60,5 80,5 85,15 C95,25 95,45 85,55 C75,65 55,65 50,55 C45,65 25,65 15,55 C5,45 5,25 15,15 C20,5 40,5 50,15 Z" fill="%23e75480"/></svg>') repeat;
         }
 
         .hero-content h1 {
@@ -386,8 +386,6 @@
             font-weight: 300;
             position: relative;
             display: inline-block;
-            color: #fdfdfd;
-            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
         }
 
         .hero-content h1::after {
@@ -407,8 +405,7 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            color: #e0dcdc;
-            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+            color: var(--dark);
         }
 
         /* Serviços */
@@ -452,6 +449,12 @@
             height: 200px;
             overflow: hidden;
             position: relative;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 4rem;
         }
 
         .service-img::after {
@@ -462,17 +465,6 @@
             width: 100%;
             height: 50%;
             background: linear-gradient(transparent, rgba(248, 200, 220, 0.1));
-        }
-
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
         }
 
         .service-content {
@@ -519,22 +511,17 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
             aspect-ratio: 1/1;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 3rem;
         }
 
         .gallery-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
         }
 
         .gallery-overlay {
@@ -665,6 +652,13 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(248, 200, 220, 0.3);
             position: relative;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 5rem;
         }
 
         .about-img::before {
@@ -683,12 +677,6 @@
             font-size: 1.2rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             z-index: 2;
-        }
-
-        .about-img img {
-            width: 100%;
-            height: auto;
-            display: block;
         }
 
         .about-text h3 {
@@ -754,6 +742,11 @@
             font-size: 1.1rem;
         }
 
+        .contact-details i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
         .whatsapp-btn {
             display: inline-flex;
             align-items: center;
@@ -768,12 +761,12 @@
         }
 
         .whatsapp-btn:hover {
-            background-color: var(--whatsapp); /* Mantém a mesma cor */
+            background-color: var(--whatsapp);
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
         }
 
-        /* Footer - Links do WhatsApp mantêm a cor padrão */
+        /* Footer */
         footer {
             background-color: var(--dark);
             color: var(--light);
@@ -869,7 +862,6 @@
             transform: translateY(-5px);
         }
 
-        /* Links do WhatsApp no footer mantêm a cor padrão */
         .footer-social ul li a[href*="whatsapp"],
         .footer-social ul li a[href*="wa.me"] {
             color: #c9b8b8 !important;
@@ -983,52 +975,52 @@
             }
         }
 
-/* CORREÇÃO PARA O LINK DO WHATSAPP ESPECÍFICO */
-.footer-social ul li a[href="https://wa.me/5531933012152"] {
-    color: #25D366 !important;
-    background-color: rgba(37, 211, 102, 0.2) !important;
-    padding: 4px 12px !important;
-    border-radius: 15px !important;
-    display: inline-block !important;
-    margin: 5px 0 !important;
-    transition: all 0.3s ease !important;
-}
+        /* CORREÇÃO PARA O LINK DO WHATSAPP ESPECÍFICO */
+        .footer-social ul li a[href="https://wa.me/5531933012152"] {
+            color: #25D366 !important;
+            background-color: rgba(37, 211, 102, 0.2) !important;
+            padding: 4px 12px !important;
+            border-radius: 15px !important;
+            display: inline-block !important;
+            margin: 5px 0 !important;
+            transition: all 0.3s ease !important;
+        }
 
-.footer-social ul li a[href="https://wa.me/5531933012152"]:hover {
-    color: #25D366 !important;
-    background-color: rgba(37, 211, 102, 0.3) !important;
-    padding-left: 12px !important;
-    transform: none !important;
-}
+        .footer-social ul li a[href="https://wa.me/5531933012152"]:hover {
+            color: #25D366 !important;
+            background-color: rgba(37, 211, 102, 0.3) !important;
+            padding-left: 12px !important;
+            transform: none !important;
+        }
 
-/* CORREÇÃO PARA O QUADRADO BRANCO DO WHATSAPP */
-.whatsapp-float {
-    background-color: #25D366 !important;
-}
+        /* CORREÇÃO PARA O QUADRADO BRANCO DO WHATSAPP */
+        .whatsapp-float {
+            background-color: #25D366 !important;
+        }
 
-.whatsapp-float i {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
+        .whatsapp-float i {
+            display: block !important;
+            width: 100% !important;
+            height: 100% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
 
-/* Garantir que o ícone carregue corretamente */
-.whatsapp-float::before {
-    content: '' !important;
-    display: none !important;
-}
+        /* Garantir que o ícone carregue corretamente */
+        .whatsapp-float::before {
+            content: '' !important;
+            display: none !important;
+        }
 
-/* Fallback para caso o ícone não carregue */
-.whatsapp-float {
-    font-family: 'Font Awesome 6 Brands', 'Segoe UI', sans-serif !important;
-}
+        /* Fallback para caso o ícone não carregue */
+        .whatsapp-float {
+            font-family: 'Font Awesome 6 Brands', 'Segoe UI', sans-serif !important;
+        }
 
-.whatsapp-float i::before {
-    content: '\f232' !important; /* Código Unicode do WhatsApp */
-}
+        .whatsapp-float i::before {
+            content: '\f232' !important;
+        }
     </style>
 </head>
 <body>
@@ -1039,7 +1031,7 @@
     <div class="butterfly butterfly-4"></div>
     <div class="butterfly butterfly-5"></div>
 
-    <!-- WhatsApp Flutuante - Apenas Pulsante -->
+    <!-- WhatsApp Flutuante -->
     <a href="https://wa.me/5531933012152?text=Olá! Gostaria de agendar um horário para tranças no StudioMelBH" class="whatsapp-float" target="_blank" aria-label="Agendar tranças pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -1086,7 +1078,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="nago-detalhes.webp" alt="Tranças Nagô - StudioMelBH Belo Horizonte" onerror="this.src='https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'">
+                        🦋
                     </div>
                     <div class="service-content">
                         <h3>Tranças Nagô</h3>
@@ -1097,7 +1089,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="fulani-braids-close.webp" alt="Fulani Braids - StudioMelBH Belo Horizonte" onerror="this.src='https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'">
+                        🦋
                     </div>
                     <div class="service-content">
                         <h3>Fulani Braids</h3>
@@ -1108,7 +1100,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="box-braids.webp" alt="Box Braids - StudioMelBH Belo Horizonte" onerror="this.src='https://images.unsplash.com/photo-1595475888562-6c323f6311b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'">
+                        🦋
                     </div>
                     <div class="service-content">
                         <h3>Box Braids</h3>
@@ -1130,21 +1122,21 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" data-index="0">
-                    <img src="nago-detalhes.webp" alt="Tranças Nagô realizadas no StudioMelBH Belo Horizonte" onerror="this.src='https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'">
+                    🦋
                     <div class="gallery-overlay">
                         <h4>Tranças Nagô</h4>
                         <p>Estilo clássico e elegante</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-index="1">
-                    <img src="fulani-braids-close.webp" alt="Fulani Braids realizadas no StudioMelBH Belo Horizonte" onerror="this.src='https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'">
+                    🦋
                     <div class="gallery-overlay">
                         <h4>Fulani Braids</h4>
                         <p>Design moderno e sofisticado</p>
                     </div>
                 </div>
                 <div class="gallery-item" data-index="2">
-                    <img src="box-braids.webp" alt="Box Braids realizadas no StudioMelBH Belo Horizonte" onerror="this.src='https://images.unsplash.com/photo-1595475888562-6c323f6311b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'">
+                    🦋
                     <div class="gallery-overlay">
                         <h4>Box Braids</h4>
                         <p>Versátil e duradouro</p>
@@ -1185,7 +1177,7 @@
                     <a href="https://wa.me/5531933012152?text=Olá! Gostaria de saber mais sobre as tranças do StudioMelBH" class="btn" target="_blank">Fale Conosco</a>
                 </div>
                 <div class="about-img">
-                    <img src="meltrancasbh.webp" alt="Melissa - Especialista em tranças no StudioMelBH Belo Horizonte" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'">
+                    🦋
                 </div>
             </div>
         </div>
@@ -1256,80 +1248,7 @@
             document.querySelector('.nav-links').classList.toggle('active');
         });
 
-        // Galeria Expandida
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        const modal = document.querySelector('.gallery-modal');
-        const modalImg = modal.querySelector('img');
-        const modalClose = modal.querySelector('.modal-close');
-        const modalPrev = modal.querySelector('.modal-prev');
-        const modalNext = modal.querySelector('.modal-next');
-        const modalCounter = modal.querySelector('.modal-counter');
-        let currentIndex = 0;
-
-        // Abrir modal ao clicar na imagem
-        galleryItems.forEach((item, index) => {
-            item.addEventListener('click', () => {
-                currentIndex = index;
-                openModal();
-            });
-        });
-
-        function openModal() {
-            const imgSrc = galleryItems[currentIndex].querySelector('img').src;
-            modalImg.src = imgSrc;
-            updateCounter();
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        function updateCounter() {
-            modalCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
-        }
-
-        function showNext() {
-            currentIndex = (currentIndex + 1) % galleryItems.length;
-            const imgSrc = galleryItems[currentIndex].querySelector('img').src;
-            modalImg.src = imgSrc;
-            updateCounter();
-        }
-
-        function showPrev() {
-            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-            const imgSrc = galleryItems[currentIndex].querySelector('img').src;
-            modalImg.src = imgSrc;
-            updateCounter();
-        }
-
-        // Event listeners
-        modalClose.addEventListener('click', closeModal);
-        modalNext.addEventListener('click', showNext);
-        modalPrev.addEventListener('click', showPrev);
-
-        // Fechar modal ao clicar no fundo
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Navegação por teclado
-        document.addEventListener('keydown', (e) => {
-            if (modal.classList.contains('active')) {
-                if (e.key === 'Escape') closeModal();
-                if (e.key === 'ArrowRight') showNext();
-                if (e.key === 'ArrowLeft') showPrev();
-            }
-        });
-
-        // Atualizar ano do copyright
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Smooth scroll para links internos
+        // Smooth Scroll para links internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1348,6 +1267,41 @@
                 }
             });
         });
+
+        // Atualizar ano do copyright
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Galeria Modal (simplificada)
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const modal = document.querySelector('.gallery-modal');
+        const modalClose = modal.querySelector('.modal-close');
+
+        if (modalClose) {
+            modalClose.addEventListener('click', function() {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        // Fechar modal ao clicar no fundo
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Navegação por teclado
+        document.addEventListener('keydown', (e) => {
+            if (modal.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        });
+
+        console.log('StudioMelBH - Site carregado com sucesso!');
     </script>
 </body>
 </html>
