@@ -179,19 +179,19 @@
             color: var(--dark);
         }
 
-        /* Hero Section - CSS Crítico */
-        .hero {
-            height: 100vh;
-            background: 
-                linear-gradient(rgba(90, 74, 74, 0.7), rgba(90, 74, 74, 0.8)),
-                #f5f5f5 url('portfolio-background.webp') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            margin-top: 70px;
-            position: relative;
-        }
+/* Hero Section - CSS Crítico */
+.hero {
+    height: 100vh;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+        url('portfolio-background.webp') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-top: 70px;
+    position: relative;
+}
 
         .hero-content h1 {
             font-size: 3.5rem;
@@ -590,10 +590,24 @@
 
     <!-- Script otimizado -->
     <script>
-        // Carregamento otimizado da imagem do banner
-        function loadHeroImage() {
-            const hero = document.querySelector('.hero');
-            const img = new Image();
+// Carregamento otimizado da imagem do banner
+function loadHeroImage() {
+    const hero = document.querySelector('.hero');
+    const img = new Image();
+    
+    img.onload = function() {
+        // Imagem carregada com sucesso
+        console.log('Banner carregado com sucesso');
+    };
+    
+    img.onerror = function() {
+        // Fallback apenas se a imagem não carregar
+        console.warn('Imagem do banner não carregou');
+        hero.style.background = 'linear-gradient(rgba(90, 74, 74, 0.7), rgba(90, 74, 74, 0.8)), #f5f5f5';
+    };
+    
+    img.src = 'portfolio-background.webp';
+}
             
             // Mostrar indicador de carregamento sutil
             hero.style.background = 'linear-gradient(rgba(90, 74, 74, 0.7), rgba(90, 74, 74, 0.8)), #f5f5f5';
